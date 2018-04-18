@@ -23,8 +23,10 @@ if [ "$TRAVIS_BRANCH" == "master" ] ; then
     docker tag hello-world "$REPO:$COMMIT"
     docker tag "$REPO:$COMMIT" $REPO:latest
     docker tag "$REPO:$COMMIT" "$REPO:travis-$TRAVIS_BUILD_NUMBER"
+    docker tag "$REPO:$COMMIT" $REPO:master
     docker push "$REPO:$COMMIT"
     docker push "$REPO:latest"
+    docker push "$REPO:master"
     docker push "$REPO:travis-$TRAVIS_BUILD_NUMBER"
     exit 0
 fi
