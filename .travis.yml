@@ -12,7 +12,7 @@ script: true
 after_success:
   - docker --version
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker build -t hello-world .
+  - docker build -t mini .
   - env
   - ./deploy.sh
 
