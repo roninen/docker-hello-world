@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export REPO="roninen/hello-world"
+export REPO="roninen/mini"
 
 # First 7 chars of commit hash
 export COMMIT=${TRAVIS_COMMIT::7}
